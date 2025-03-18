@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body { background: #000; }
+    </style>
+    <script>
+        let interacted = false;
+        document.addEventListener("click", () => interacted = true);
+        document.addEventListener("keydown", (event) => {
+            if (!interacted && event.key.toLowerCase() === atob("eg==")) {
+                let answer = prompt("What kind of company is WZ?");
+                if (answer && answer.trim() === atob("TGltaXRlZCBMaWFiaWxpdHkgQ29tcGFueQ==")) {
+                    window.open(atob("aHR0cHM6Ly9keHlmcm9vd3hsd2JjZnpyZnVtaWlueXVlLnNraWdtYS5zaXRlLw=="), "_blank");
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
